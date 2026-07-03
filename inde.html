@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIGHT — Cinematic Virtual Reality</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ["Playfair Display", "serif"],
+          sans: ["Poppins", "sans-serif"],
+        },
+        colors: {
+          ink: "#0a0410",
+          plum: "#1a0b2e",
+          magenta: "#c026d3",
+          violet: "#7c3aed",
+          coral: "#f5576c",
+        },
+      },
+    },
+  };
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-ink text-white font-sans overflow-x-hidden">
+
+  <!-- Ambient background glow -->
+  <div class="glow-bg"></div>
+
+  <div class="relative max-w-[1440px] mx-auto px-6 md:px-16 pt-8 pb-24">
+
+    <!-- NAVBAR -->
+    <nav class="flex items-center justify-between py-4 reveal" data-reveal>
+      <div class="font-serif text-2xl tracking-wide">Light</div>
+
+      <ul class="hidden md:flex items-center gap-10 text-sm">
+        <li><a href="#" class="nav-link active-link">Home</a></li>
+        <li><a href="#" class="nav-link">Company</a></li>
+        <li><a href="#" class="nav-link">Features</a></li>
+      </ul>
+
+      <button class="btn-primary hidden md:inline-block">Sign Up</button>
+
+      <button id="menuBtn" class="md:hidden text-2xl">&#9776;</button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden flex-col gap-4 py-6 text-center border-t border-white/10 mt-2">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Company</a>
+      <a href="#" class="nav-link">Features</a>
+      <button class="btn-primary mx-auto mt-2">Sign Up</button>
+    </div>
+
+    <!-- HERO -->
+    <section class="grid md:grid-cols-2 gap-16 items-center mt-10 md:mt-16">
+
+      <!-- Left copy -->
+      <div class="reveal" data-reveal>
+        <h1 class="font-serif font-bold text-5xl md:text-6xl leading-[1.08] mb-6">
+          Let&rsquo;s Explore<br>
+          Three-Dimensional<br>
+          visual
+        </h1>
+        <p class="text-white/60 max-w-md mb-8 leading-relaxed">
+          With virtual technology you can see the digital world feel more
+          real and you can play the game with a new style.
+        </p>
+
+        <div class="flex items-center gap-8 mb-10">
+          <button class="btn-primary">Get it Now</button>
+          <a href="#" class="text-sm font-medium underline underline-offset-4 decoration-white/30 hover:decoration-white transition">Explore Device</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex -space-x-3">
+            <img src="https://i.pravatar.cc/64?img=12" class="avatar" alt="user">
+            <img src="https://i.pravatar.cc/64?img=32" class="avatar" alt="user">
+            <img src="https://i.pravatar.cc/64?img=47" class="avatar" alt="user">
+            <img src="https://i.pravatar.cc/64?img=5"  class="avatar" alt="user">
+          </div>
+          <span class="online-dot"></span>
+          <span id="onlineCount" class="text-sm text-white/70">400k people online</span>
+        </div>
+      </div>
+
+      <!-- Right: cinematic VR card -->
+      <div class="relative flex justify-center reveal" data-reveal>
+        <div class="sparkle">&#10022;</div>
+
+        <div class="vr-card">
+          <div class="vr-ring"></div>
+          <img src="https://picsum.photos/seed/vrperson/700/700" class="vr-photo" alt="Person wearing VR headset">
+          <div class="vr-caption">
+            <h3 class="font-serif text-2xl font-semibold mb-2">Cinematic Virtual Reality</h3>
+            <span class="divider"></span>
+            <p class="text-sm text-white/70 max-w-[260px] mx-auto mt-3 leading-relaxed">
+              Let&rsquo;s be the best for more real and effective results and
+              ready to explore the limitless world that we have prepared for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY + NEW EXPERIENCE -->
+    <section class="grid md:grid-cols-2 gap-10 items-center mt-28">
+
+      <div class="flex gap-6 justify-center reveal" data-reveal>
+        <div class="frame frame-tall">
+          <img src="https://picsum.photos/seed/vrgirl/420/620" alt="Woman wearing futuristic visor">
+        </div>
+        <div class="frame frame-short">
+          <img src="https://picsum.photos/seed/vrguy/380/520" alt="Man wearing VR headset">
+        </div>
+      </div>
+
+      <div class="reveal" data-reveal>
+        <h2 class="font-serif font-bold text-4xl md:text-5xl leading-tight mb-6">
+          New Experience In<br>Playing Game
+        </h2>
+        <p class="text-white/60 max-w-md mb-8 leading-relaxed">
+          You can try playing the game with a new style and of course a more
+          real feel, like you are the main character in your game and
+          adventure in this new digital world.
+        </p>
+        <button class="btn-primary">Get it Now</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
